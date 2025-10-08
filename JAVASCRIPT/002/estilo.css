@@ -1,0 +1,37 @@
+/* Classe ( . ) */
+/* ID     ( # ) */
+
+/* h1{
+    color:blueviolet;
+} */
+*{
+    margin: 0px; /*espaçamento externo */
+    padding: 0px; /*espaçamento interno */
+}
+.cor-roxo{
+    color:blueviolet;
+    background-color: aquamarine;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.quadrado001{
+    background-color: brown; /* Cor de fundo */
+    color: antiquewhite; /* Cor do texto */
+    height: 100px; /* altura */
+    width: 100px; /*largura */
+    margin: 10px 0px 10px 0px;
+}
+
+.quadrado002{
+    background-color: rgba(42, 165, 144, 0.534); /* Cor de fundo */
+    color: rgba(58, 83, 224, 0.733); /* Cor do texto */
+    height: 100px; /* altura */
+    width: 100px; /*largura */
+}
+
+.aliamento{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    height: 100vh;
+}
