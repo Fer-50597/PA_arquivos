@@ -93,3 +93,36 @@
 .alinha-meia{
     align-items: center;
 }
+
+.canto{
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.canto-superior-direito{
+    justify-content: end;
+}
+
+.coma{
+    justify-content: flex-start;
+}
+
+.baixa{
+    align-items: end;
+}
+
+.come{
+    align-items: start;
+}
+
+.terco{
+    height: 33.333333%;
+}
+
+.space{
+    justify-content: space-between;
+}
+
+.start{
+    justify-content: start;
+}
