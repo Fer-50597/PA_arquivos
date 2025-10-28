@@ -30,8 +30,8 @@
 
 .quadrado-roxo {
     background-color: blueviolet;
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
 }
 
 .quadrado-roxo-maior {
@@ -91,4 +91,12 @@
 
 .row{
     flex-direction: row;
+}
+
+.between{
+    justify-content: space-between;
+}
+
+.baseline{
+    align-items: last baseline;
 }
