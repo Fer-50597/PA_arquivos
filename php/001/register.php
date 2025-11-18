@@ -1,38 +1,35 @@
 <?php
-session_start();
 require "conexao.php";
 
 if ($_POST) {
+    $nome  = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "SELECT * FROM usuarios WHERE email = '$email' LIMIT 1";
-    $res = mysqli_query($conn, $sql);
+    $sql = "INSERT INTO usuarios (nome, email, senha)
+            VALUES ('$nome', '$email', '$senha')";
 
-    if (mysqli_num_rows($res) > 0) {
-        $user = mysqli_fetch_assoc($res);
-
-        if ($senha == $user['senha']) {
-            $_SESSION['id'] = $user['id'];
-            $_SESSION['nome'] = $user['nome'];
-            header("Location: painel.php");
-            exit;
-        } else {
-            $erro = "Senha incorreta";
-        }
+    if (mysqli_query($conn, $sql)) {
+        header("Location: login.php");
+        exit;
     } else {
-        $erro = "Usuário não encontrado";
+        $erro = "Erro ao cadastrar!";
     }
 }
 ?>
 <link rel="stylesheet" href="style.css">
 
 <div class="container">
-    <h2>Login</h2>
+    <h2>Cadastrar</h2>
 
     <?php if(isset($erro)) echo "<p style='color:red; text-align:center;'>$erro</p>"; ?>
 
     <form method="POST">
+        <div class="input-box">
+            <label>Nome</label>
+            <input type="text" name="nome" required>
+        </div>
+
         <div class="input-box">
             <label>Email</label>
             <input type="email" name="email" required>
@@ -43,10 +40,10 @@ if ($_POST) {
             <input type="password" name="senha" required>
         </div>
 
-        <button type="submit">Entrar</button>
+        <button type="submit">Cadastrar</button>
 
         <div class="footer-link">
-            Não tem conta? <a href="register.php">Cadastrar</a>
+            Já tem conta? <a href="login.php">Entrar</a>
         </div>
     </form>
 </div>
