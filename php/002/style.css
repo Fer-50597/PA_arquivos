@@ -1,0 +1,159 @@
+/* Reset e fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo com cor fixa */
+body {
+    background: #F5F5F5; /* Cinza muito claro */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    animation: fadeIn .5s ease-in-out;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Títulos */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2C73D2; /* Azul biblioteca */
+}
+
+/* Formulário */
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box label {
+    font-size: 14px;
+    color: #333333; /* Texto principal */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-box input,
+.input-box select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 15px;
+    transition: .2s;
+    color: #333333; /* Texto principal */
+}
+
+.input-box input:focus,
+.input-box select:focus {
+    border-color: #2C73D2; /* Azul biblioteca */
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2C73D2; /* Azul biblioteca */
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #1e4fa3; /* Azul mais escuro */
+}
+
+/* Tabela de listagem */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #26A69A; /* Verde suave */
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    color: #333333; /* Texto principal */
+}
+
+table th {
+    background: #F5F5F5; /* Cinza muito claro */
+    color: #333333;
+}
+
+/* Mensagens */
+.sucesso {
+    color: #81C784; /* Verde claro */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.erro {
+    color: #E57373; /* Vermelho suave */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #2C73D2; /* Azul biblioteca */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+.footer-link {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #666666; /* Texto secundário */
+}
+
+/* Botões de navegação */
+.nav-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #26A69A; /* Verde suave */
+    color: #fff;
+    font-size: 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.btn:hover {
+    background: #1e857a; /* Verde mais escuro */
+}
